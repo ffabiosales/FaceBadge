@@ -1,0 +1,84 @@
+.faceBadge{
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
+    color: #fefefe;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    position: absolute;    
+}
+.faceBadge .desc {
+    padding: 0; margin: 0; height:77px; background-color: rgba(190, 190, 190, 0.40);
+    border-radius: 4px
+}
+.faceBadge .count {
+    background-color: rgba(190, 190, 190, 0.40);
+}
+.faceBadge .count span {
+    padding: 0 5px;
+}
+.pageName {
+
+    float: left;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #fff;
+
+}
+.image img {
+    border: 1px solid #fff;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(60, 113, 80, 0.75);
+    -moz-box-shadow:    0px 0px 2px 0px rgba(60, 113, 80, 0.75);
+    box-shadow:         0px 0px 2px 0px rgba(60, 113, 80, 0.75);
+    border-radius: 8px;
+}
+.faceBadge .preLoader {
+    text-align: center;
+    color: #ccc;
+    
+}
+.faceBadge-cover {
+    height: 137px; overflow: hidden
+}
+
+.FaceBadge-image {
+    margin: -70px 10px 0;
+    border: 1px solid #999;
+    border-radius: 2px;
+
+    float: left;
+
+    position: relative;
+}
+.FaceBadge-image img {
+    border: 3px solid #fff;
+    border-radius: 2px;
+}
+.faceBadge-name {
+    float: left;
+    margin: -32px 0 0;
+    position: relative;
+    z-index: 1000;
+    font-weight: bold;   
+}
+.faceBadge-like-count {
+    float: left; 
+    margin-top: 10px;
+}
+.faceBadge-like-count span {
+    margin: 0 8px;
+}
+.faceBadge-desc {
+    float: left;
+    position: absolute;
+    padding: 10px;
+}
+.faceBadge-desc:before{
+    content: '"';
+}
+.faceBadge-desc:after{
+    content: '"';
+}
+.cover-shadow {
+    background: url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yG/r/8RHv8nDQAHL.png) left bottom repeat-x;
+    position: absolute;
+    top: 0;
+}
