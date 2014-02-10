@@ -24,15 +24,18 @@
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-        <script src="js/jquery.faceBadges.js"></script>
+        
+        <!--Plugin Call-->
+        <script src="js/jquery.faceBadge.js"></script>
+        
         <script type="text/javascript">
             $(document).ready(function() {
                 $(".test").faceBadge({
                     pageId: "tvebahia",
                     loaderText: "Creating badge...",
                     width: 350,
-                    coverHeight: 140,
-                    showDesc: true,
+                    coverHeight: 120,
+                    showDesc: false, 
                     linkToPage: true
                 });
             });
