@@ -12,7 +12,7 @@ Include Jquery library and plugin call in the footer.
 <script src="jquery.faceBadges.js" type="text/javascript"></script>
 ```
 
-Include css style before the tag </head>.
+Include css style before the tag ```html </head> ```.
 ```html
   <link rel="stylesheet" href="css/faceBadges.css">
 ```
