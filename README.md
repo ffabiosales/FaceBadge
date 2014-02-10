@@ -9,10 +9,10 @@ How to use?
 Include Jquery library and plugin call in the footer.
 ```html
 <script src="jquery.js" type="text/javascript"></script>
-<script src="jquery.faceBadges.js" type="text/javascript"></script>
+<script src="jquery.faceBadge.js" type="text/javascript"></script>
 ```
 
 Include css style before the tag ``` </head> ```.
 ```html
-  <link rel="stylesheet" href="css/faceBadges.css">
+  <link rel="stylesheet" href="css/faceBadge.css">
 ```
