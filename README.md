@@ -7,10 +7,12 @@ FaceBadge add a badge of your Facebook Page in your site.
 How to use?
 ----------
 Include Jquery library and plugin call in the footer.
-  <code><script src="jquery.js" type="text/javascript"></script>
-  <script src="jquery.lazyload.js" type="text/javascript"></script></code>
+```html
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.lazyload.js" type="text/javascript"></script>
+```
 
 Include css style before the tag </head>.
-  <pre>
+```html
   <link rel="stylesheet" href="css/faceBadge.css">
-  </pre>
+```
