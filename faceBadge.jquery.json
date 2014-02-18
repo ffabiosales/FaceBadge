@@ -6,8 +6,8 @@
         "facebook",
         "badge"
     ],
-    "version": "1.1",
-    "author": {
+    "version": "1.0.2", 
+    "author": { 
         "name": "Fábio Sales",
         "url": "https://github.com/ffabiosales"
     },
