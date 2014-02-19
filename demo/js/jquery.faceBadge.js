@@ -39,7 +39,7 @@
             c.show();
             //c.html('teste');
 
-            // request (o.numTweets + 20) to avoid not having enough tweets if includeRetweets = false and/or excludeReplies = true
+            // call facebook graph of page.
             window.jsonPageGraph = "http://graph.facebook.com/" + o.pageId;
 
 
