@@ -15,6 +15,7 @@
             pageId: null,
             loaderText: "Loading badge...",
             width: 500,
+            height: 165,
             coverHeight: 137,
             textColor: "#999",
             showDesc: false,
@@ -35,7 +36,8 @@
             c.append(preLoaderHTML);
 
             // show container element
-            c.css('width', o.width);
+            c.css('width', o.width)
+            c.css('height', o.height);
             c.show();
             //c.html('teste');
 
@@ -56,7 +58,7 @@
                         var fb_desc = '';
                         var fb_about = '';
                         var coverBad = data.cover.source;
-                        var cover = coverBad.replace('s720x720', 's480x480');
+                        var cover = coverBad.replace('s720x720', 's720x720');
                         var desc = '';
                         if (o.linkToPage) {
                             var link = '<a target="_blank" href="' + data['link'] + '">';
@@ -92,12 +94,12 @@
                         if (o.showDesc) {
                             fbcover.append('<div class="faceBadge-desc">' + desc + '</div>');
                         }
-                        fbcover.append('<img style="margin-left: -110px" src="' + cover + '" /><div style="height: ' + o.coverHeight + 'px ; width:100%" class="cover-shadow"></div>');
+                        fbcover.append('<img width="'+ o.width +'" style="" src="' + cover + '" /><div style="height: ' + o.coverHeight + 'px ; width:100%" class="cover-shadow"></div>');
                         //c.append('<div style="height: 100%; width:100%" class="cover-shadow"></div>');
                         c.append('<div id="faceBadge" class="faceBadge-page-data"></div>');
 
                         var fbdata = $('.faceBadge-page-data');
-                        fbdata.append('<div class="FaceBadge-image">' + link + '<img src="http://res.cloudinary.com/demo/image/facebook/w_100,h_100,c_fill/' + o.pageId + '.jpg" width="100" height="100"/>' + linkEnd + '</div>');
+                        fbdata.append('<div class="FaceBadge-image">' + link + '<img src="https://graph.facebook.com/' + o.pageId + '/picture?width=100&height=100" width="100" height="100"/>' + linkEnd + '</div>');
                         fbdata.append('<div class="faceBadge-content"><div class="faceBadge-name">' + fb_name + '</div></div>');
                         fbdata.append('<div class="faceBadge-like-count"></div>');
                         $(".faceBadge-like-count").append('<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(('http://www.facebook.com/' + o.pageId)) + '&amp;width=100px&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35&amp;appId=442899805810904" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:35px; float:left" allowTransparency="true" id="face"></iframe>');

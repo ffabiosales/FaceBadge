@@ -3,7 +3,9 @@
     color: #fefefe;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
-    position: absolute;    
+    position: absolute;  
+    box-shadow: 0px 1px 5px 0px #ccc;
+    border-radius: 3px;
 }
 .faceBadge .desc {
     padding: 0; margin: 0; height:77px; background-color: rgba(190, 190, 190, 0.40);
@@ -33,24 +35,31 @@
 .faceBadge .preLoader {
     text-align: center;
     color: #ccc;
-    
+
 }
 .faceBadge-cover {
-    height: 137px; overflow: hidden
+    height: 137px; 
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
 }
 
 .FaceBadge-image {
     margin: -70px 10px 0;
-    border: 1px solid #999;
-    border-radius: 2px;
+
 
     float: left;
 
     position: relative;
+    border: 3px solid #fff;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, .3);
+    -webkit-border-radius: 3px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .07);    
 }
 .FaceBadge-image img {
-    border: 3px solid #fff;
-    border-radius: 2px;
+/*    border: 1px solid #999;
+    border-radius: 3px;*/
+    /*padding: 1px;*/    
 }
 .faceBadge-name {
     float: left;
@@ -65,6 +74,10 @@
 }
 .faceBadge-like-count span {
     margin: 0 8px;
+    color: #999;
+    text-shadow: none;
+    font-size: 12px;
+    font-family: arial;
 }
 .faceBadge-desc {
     float: left;
