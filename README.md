@@ -16,3 +16,9 @@ Include css style before the tag ``` </head> ```.
 ```html
   <link rel="stylesheet" href="css/faceBadge.css">
 ```
+
+DEMO
+-----
+```html
+<a href="ffabiosales.github.io"> click here </a> to see a working demo.
+```
