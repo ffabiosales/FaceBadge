@@ -20,4 +20,4 @@ Include css style before the tag ``` </head> ```.
 DEMO
 -----
 
-<a href="ffabiosales.github.io"> click here </a> to see a working demo.
+<a href="http://ffabiosales.github.io"> click here </a> to see a working demo. 
