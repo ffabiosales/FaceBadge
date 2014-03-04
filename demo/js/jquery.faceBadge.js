@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
     /*
      jquery.faceBadge.js v1.0
      Last updated: 31 January 2014
@@ -9,7 +9,9 @@
      Licensed under a Creative Commons Attribution-Non-Commercial 3.0 Unported License
      http://creativecommons.org/licenses/by-nc/3.0/
      */
-    $.fn.faceBadge = function(options) {
+    /*global window, jQuery */
+    $.fn.faceBadge = function (options) {
+        "use strict";
 
         $.fn.faceBadge.defaults = {
             pageId: null,
@@ -24,19 +26,20 @@
 
         var o = $.extend({}, $.fn.faceBadge.defaults, options);
 
-        return this.each(function() {
-            var c = $(this);
+        return this.each(function () {
+            var c = $(this),
+                preLoaderHTML = $("<p class=\"preLoader\">" + o.loaderText + "</p>");
 
             // hide container element, remove alternative content, and add class
             c.hide().empty().addClass("faceBadge");
 
 
             // add preLoader to container element
-            var preLoaderHTML = $("<p class=\"preLoader\">" + o.loaderText + "</p>");
+            //var preLoaderHTML = $("<p class=\"preLoader\">" + o.loaderText + "</p>");
             c.append(preLoaderHTML);
 
             // show container element
-            c.css('width', o.width)
+            c.css('width', o.width);
             c.css('height', o.height);
             c.show();
             //c.html('teste');
@@ -49,22 +52,21 @@
             jQuery.getJSON(jsonPageGraph, {
                 format: "json"
             })
-                    .done(function(data) {
+                    .done(function (data) {
 
                         c.hide();
-                        var fb_count = data['likes'].toString();
-                        var fb_about = data['about'].toString().substr(0, 100) + ' ...';
-                        var fb_name = data['name'].toString();
-                        var fb_desc = '';
-                        var fb_about = '';
-                        var coverBad = data.cover.source;
-                        var cover = coverBad.replace('s720x720', 's720x720');
-                        var desc = '';
+                        var fb_count = data['likes'].toString(),
+                            fb_about = data['about'].toString().substr(0, 100) + ' ...',
+                            fb_name = data['name'].toString(),
+                            fb_desc = '',
+                            fb_about = '',
+                            coverBad = data.cover.source,
+                            cover = coverBad.replace('s720x720', 's720x720'),
+                            desc = '';
                         if (o.linkToPage) {
-                            var link = '<a target="_blank" href="' + data['link'] + '">';
-                            var linkEnd = '</a>';
-                        }
-                        else {
+                            var link = '<a target="_blank" href="' + data['link'] + '">',
+                                linkEnd = '</a>';
+                        } else {
                             link = '';
                             linkEnd = '';
                         }
@@ -94,7 +96,7 @@
                         if (o.showDesc) {
                             fbcover.append('<div class="faceBadge-desc">' + desc + '</div>');
                         }
-                        fbcover.append('<img width="'+ o.width +'" style="" src="' + cover + '" /><div style="height: ' + o.coverHeight + 'px ; width:100%" class="cover-shadow"></div>');
+                        fbcover.append('<img width="' + o.width + ' " style="" src="' + cover + '" /><div style="height: ' + o.coverHeight + 'px ; width:100%" class="cover-shadow"></div>');
                         //c.append('<div style="height: 100%; width:100%" class="cover-shadow"></div>');
                         c.append('<div id="faceBadge" class="faceBadge-page-data"></div>');
 
@@ -113,9 +115,10 @@
         //customize like number
         function add_commas(number) {
             if (number.length > 3) {
-                var mod = number.length % 3;
-                var signal = '.';
-                var output = (mod > 0 ? (number.substring(0, mod)) : '');
+                var mod = number.length % 3,
+                    signal = '.',
+                    output = (mod > 0 ? (number.substring(0, mod)) : ''),
+                    i = 0;
                 for (i = 0; i < Math.floor(number.length / 3); i++) {
                     if ((mod === 0) && (i === 0)) {
                         output += number.substring(mod + 3 * i, mod + 3 * i + 3);
