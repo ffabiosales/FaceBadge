@@ -34,7 +34,7 @@ Below the jquery.faceBadge.js script tag. Add the plugin trigger.
             loaderText: "Creating badge...", //Text to show before load all data.
             width: 350,
             coverHeight: 120, //The height of cover div in the FaceBadge.
-            showDesc: false, /Show/Hide some text of your Page.
+            showDesc: false, //Show/Hide some text of your Page.
             linkToPage: true //add a link direct to your Page in the thumbnail.
         });
     });
