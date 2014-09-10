@@ -44,4 +44,4 @@ Below the jquery.faceBadge.js script tag. Add the plugin trigger.
 DEMO
 -----
 
-<a href="http://ffabiosales.github.io"> click here </a> to see a working demo. 
+<a href="http://fabiosales.com/demos/facebadgejs"> click here </a> to see a working demo. 
